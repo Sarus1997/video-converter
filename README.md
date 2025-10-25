@@ -204,4 +204,4 @@ python main.py input_videos --batch
 
 โปรเจกต์นี้เป็น open source สามารถนำไปใช้และแก้ไขได้ตามต้องการ
 
-[MIT License](LICENSE)
+[MIT License](./LICENSE)
