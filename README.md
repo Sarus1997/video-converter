@@ -34,15 +34,36 @@ C:\VideoConverter
 ### 1. Python 3.8 ขึ้นไป
 ดาวน์โหลดได้ที่ [python.org](https://www.python.org/downloads/)
 
+- ติดตั้ง `argparse`, `subprocess`, `shutil`, `sys`, `pathlib`
+
 ### 2. FFmpeg
 ดาวน์โหลด: [ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+
+### 3. FFmpeg for windows
+ดาวน์โหลด: [https://www.gyan.dev/ffmpeg/builds/#release-builds](https://www.gyan.dev/ffmpeg/builds/#release-builds)
+
+- มองหา ``ffmpeg-release-essentials.zip`
 
 **วิธีติดตั้ง FFmpeg:**
 - **Windows:** แตกไฟล์แล้วเพิ่ม path ของ `ffmpeg.exe` เข้า System PATH
 - **macOS:** `brew install ffmpeg`
 - **Linux:** `sudo apt install ffmpeg` หรือ `sudo yum install ffmpeg`
 
-**ตรวจสอบการติดตั้ง:**
+### 4. ติดตั้ง dependencies
+
+- กดปุ่ม Windows + R
+- พิมพ์ sysdm.cpl แล้วกด Enter
+- ไปที่แท็บ Advanced → กดปุ่ม Environment Variables...
+- ในช่อง "System variables" หา Path → คลิก Edit
+- กด New แล้วใส่:
+
+```
+  C:\ffmpeg\bin
+```
+
+### 5. ตรวจสอบการติดตั้ง FFmpeg ทดสอบว่าใช้ได้
+
+**เปิด Command Prompt (cmd) แล้วพิมพ์:**
 ```bash
 ffmpeg -version
 ```
@@ -183,6 +204,4 @@ python main.py input_videos --batch
 
 โปรเจกต์นี้เป็น open source สามารถนำไปใช้และแก้ไขได้ตามต้องการ
 
----
-
-**สร้างด้วย ❤️ | Powered by FFmpeg**
+[MIT License](LICENSE)
